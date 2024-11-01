@@ -9,5 +9,6 @@ func _ready() -> void:
 func _process(delta):
 	progress_ratio += delta * speed
 	
-	#if progress_ratio == 0.95:
-		#speed = 0
+	if progress_ratio == 1:
+		if Input.is_action_just_pressed("talk"):
+			Dialogic.start("raccoonTalkingToPlayer")

@@ -1,0 +1,56 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "talking normal",
+"description": "",
+"display_name": "RaccoonYapping",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"listening": {
+"export_overrides": {
+"image": "\"res://Characters/New Piskel-1.png.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.5,
+"scene": ""
+},
+"listening sad": {
+"export_overrides": {
+"image": "\"res://Characters/New Piskel-2.png (1).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"talking normal": {
+"export_overrides": {
+"image": "\"res://Characters/New Piskel-2.png.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"talking sad": {
+"export_overrides": {
+"image": "\"res://Characters/New Piskel-2.png (2).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

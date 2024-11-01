@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://yajoalun2mmo"]
 
 [ext_resource type="Script" path="res://Characters/Character Scripts/raccoon_opening_scene.gd" id="1_hmphc"]
-[ext_resource type="Texture2D" uid="uid://c2yucmxprxvwi" path="res://icon.svg" id="2_vpstu"]
+[ext_resource type="Texture2D" uid="uid://bm4pexox1qk5n" path="res://icon.svg" id="2_vpstu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37fus"]
 animations = [{

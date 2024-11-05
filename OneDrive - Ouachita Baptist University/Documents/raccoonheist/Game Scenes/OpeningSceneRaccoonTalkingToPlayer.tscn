@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://ceji2c6vy57cd"]
+[gd_scene load_steps=13 format=4 uid="uid://ceji2c6vy57cd"]
 
 [ext_resource type="Texture2D" uid="uid://148pgfq6t4he" path="res://free version/forest asset pack/tilesets/grass.png" id="1_x3wyt"]
 [ext_resource type="Texture2D" uid="uid://cx0x6jf4r8tjc" path="res://free version/forest asset pack/tilesets/plains.png" id="2_mv7hl"]
 [ext_resource type="Texture2D" uid="uid://oc0k534rwlac" path="res://free version/free.png" id="3_yixmi"]
 [ext_resource type="Script" path="res://Game Scenes/Game Scene Scripts/racoonWalkingInOpeningScene.gd" id="4_a3im1"]
 [ext_resource type="PackedScene" uid="uid://yajoalun2mmo" path="res://Characters/raccoonOpeningScene.tscn" id="4_xbj0f"]
+[ext_resource type="Script" path="res://Game Scenes/area_2d.gd" id="6_6gjgm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w5okj"]
 texture = ExtResource("1_x3wyt")
@@ -202,6 +203,8 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwnb0"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -226,5 +229,23 @@ script = ExtResource("4_a3im1")
 position = Vector2(26, -13)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(304, 160)
+position = Vector2(306, 160)
 zoom = Vector2(2.055, 2.055)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_6gjgm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(354, 160)
+shape = SubResource("RectangleShape2D_kwnb0")
+
+[node name="Label" type="Label" parent="Area2D"]
+offset_left = 252.0
+offset_top = 75.0
+offset_right = 366.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "press 't' to talk"
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

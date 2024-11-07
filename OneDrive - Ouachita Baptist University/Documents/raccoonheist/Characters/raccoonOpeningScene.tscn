@@ -29,12 +29,77 @@ region = Rect2(0, 640, 640, 640)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37fus"]
 animations = [{
-"frames": [{
+"frames": [ {
 "duration": 1.0,
-"texture": ExtResource("2_vpstu")
+"texture": ExtResource("4_ch6nf")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_amowa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s5jtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_amowa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_suc1d")
+}],
+"loop": true,
+"name": &"idle forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_mhja5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_emwmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mhja5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq604")
+}],
+"loop": true,
+"name": &"idle left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_v6sra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_44a5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_v6sra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mefgf")
+}],
+"loop": true,
+"name": &"idle right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mtr0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5chwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_k21sx")
+}],
+"loop": true,
+"name": &"walking forward",
 "speed": 5.0
 }, {
 "frames": [{
@@ -67,8 +132,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qujqy"]
-radius = 40.0
-height = 112.0
+radius = 34.2105
+height = 98.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_jr1lm"]
 font_size = 12
@@ -78,14 +143,16 @@ position = Vector2(287, 145)
 script = ExtResource("1_hmphc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -2)
-scale = Vector2(0.25, 0.254)
+position = Vector2(47, 13)
+scale = Vector2(0.378421, 0.379763)
 sprite_frames = SubResource("SpriteFrames_37fus")
-animation = &"raccoonChickenFront"
-frame_progress = 0.752839
+animation = &"walking forward"
+frame_progress = 0.407912
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -1)
+visible = false
+position = Vector2(57, -5)
+scale = Vector2(4.56, 5.2)
 shape = SubResource("CapsuleShape2D_qujqy")
 
 [node name="Inventory" type="Node2D" parent="."]

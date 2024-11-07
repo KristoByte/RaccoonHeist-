@@ -1,21 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://yajoalun2mmo"]
+[gd_scene load_steps=8 format=3 uid="uid://yajoalun2mmo"]
 
 [ext_resource type="Script" path="res://Characters/Character Scripts/raccoon_opening_scene.gd" id="1_hmphc"]
-[ext_resource type="Texture2D" uid="uid://4b2w328i5ku5" path="res://Characters/Raccoon Sprite Idle Backward.png" id="2_ako77"]
-[ext_resource type="Texture2D" uid="uid://yleynbax0no6" path="res://Characters/Raccoon Sprite Moving Forward 1.png" id="2_mtr0l"]
-[ext_resource type="Texture2D" uid="uid://ohln37fprw01" path="res://Characters/Raccoon Sprite Moving Forward 2.png" id="3_5chwe"]
-[ext_resource type="Texture2D" uid="uid://blg75uq4nn6qs" path="res://Characters/Raccoon Sprite Idle Backward 2.png" id="3_lhtto"]
-[ext_resource type="Texture2D" uid="uid://2fgthjy2v8gp" path="res://Characters/Raccoon Sprite Idle Backward 3.png" id="4_ch6nf"]
-[ext_resource type="Texture2D" uid="uid://dccc72vh5qn62" path="res://Characters/Raccoon Sprite Idle Forward 1.png" id="5_amowa"]
-[ext_resource type="Texture2D" uid="uid://cbbtxhrttckj6" path="res://Characters/Raccoon Sprite Idle Forward 2.png" id="6_s5jtp"]
-[ext_resource type="Texture2D" uid="uid://bla3nloqgv811" path="res://Characters/Raccoon Sprite Idle Forward 3.png" id="7_suc1d"]
-[ext_resource type="Texture2D" uid="uid://dxaenucr3foi5" path="res://Characters/Raccoon Sprite Idle Left 1.png" id="8_mhja5"]
-[ext_resource type="Texture2D" uid="uid://cnlo7p0f8x6js" path="res://Characters/Raccoon Sprite Idle Left 2.png" id="9_emwmv"]
-[ext_resource type="Texture2D" uid="uid://heo2teuimw4p" path="res://Characters/Raccoon Sprite Idle Left 3.png" id="10_lq604"]
-[ext_resource type="Texture2D" uid="uid://c58ajqwm2ilgn" path="res://Characters/Raccoon Sprite Idle Right 1.png" id="11_v6sra"]
-[ext_resource type="Texture2D" uid="uid://onjvge14rg6g" path="res://Characters/Raccoon Sprite Idle Right 2.png" id="12_44a5q"]
-[ext_resource type="Texture2D" uid="uid://b0yj35rilmmpi" path="res://Characters/Raccoon Sprite Idle Right 3.png" id="13_mefgf"]
-[ext_resource type="Texture2D" uid="uid://bpgtqprrs4wxm" path="res://Characters/Raccoon Sprite Moving Forward 3 .png" id="16_k21sx"]
+[ext_resource type="Texture2D" uid="uid://bm4pexox1qk5n" path="res://icon.svg" id="2_vpstu"]
+[ext_resource type="Script" path="res://Characters/inventory.gd" id="3_5umee"]
+[ext_resource type="PackedScene" uid="uid://cpixnt7ygn1bc" path="res://Characters/inventory_slot.tscn" id="4_6lhiq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37fus"]
 animations = [{
@@ -106,10 +94,12 @@ animations = [{
 radius = 34.2105
 height = 98.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_jr1lm"]
+font_size = 12
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(500, 315)
+position = Vector2(287, 145)
 script = ExtResource("1_hmphc")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(47, 13)
@@ -123,3 +113,97 @@ visible = false
 position = Vector2(57, -5)
 scale = Vector2(4.56, 5.2)
 shape = SubResource("CapsuleShape2D_qujqy")
+
+[node name="Inventory" type="Node2D" parent="."]
+script = ExtResource("3_5umee")
+
+[node name="Inventory Window" type="Panel" parent="Inventory"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -88.5
+offset_right = 144.0
+offset_bottom = 88.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SlotContainer" type="GridContainer" parent="Inventory/Inventory Window"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = -75.5
+offset_right = 130.5
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 5
+
+[node name="InventorySlot" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
+layout_mode = 2
+
+[node name="InfoText" type="Label" parent="Inventory/Inventory Window"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "place holder"
+label_settings = SubResource("LabelSettings_jr1lm")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -204,6 +204,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwnb0"]
+size = Vector2(30, 17)
 
 [node name="Node2D" type="Node2D"]
 
@@ -220,13 +221,15 @@ tile_set = SubResource("TileSet_vugue")
 curve = SubResource("Curve2D_h3nmq")
 
 [node name="RaccoonWalkingIn" type="PathFollow2D" parent="Path2D"]
-position = Vector2(8, 160)
+position = Vector2(284, 160)
+progress = 276.0
 rotates = false
 loop = false
 script = ExtResource("4_a3im1")
 
 [node name="CharacterBody2D" parent="Path2D/RaccoonWalkingIn" instance=ExtResource("4_xbj0f")]
-position = Vector2(26, -13)
+position = Vector2(1, 0)
+scale = Vector2(0.1, 0.1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(306, 160)
@@ -236,7 +239,7 @@ zoom = Vector2(2.055, 2.055)
 script = ExtResource("6_6gjgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(354, 160)
+position = Vector2(320, 158.5)
 shape = SubResource("RectangleShape2D_kwnb0")
 
 [node name="Label" type="Label" parent="Area2D"]

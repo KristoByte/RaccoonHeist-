@@ -154,7 +154,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walking forward",
-"speed": 6.0
+"speed": 4.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qujqy"]
@@ -170,14 +170,13 @@ position = Vector2(287, 145)
 script = ExtResource("1_hmphc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(245, 172)
+position = Vector2(41, 12)
 scale = Vector2(0.378421, 0.379763)
 sprite_frames = SubResource("SpriteFrames_37fus")
 animation = &"walking forward"
 frame_progress = 0.533159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(57, -5)
 scale = Vector2(4.56, 5.2)
 shape = SubResource("CapsuleShape2D_qujqy")

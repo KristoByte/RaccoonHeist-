@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5py4jd3i2ne2"
-path="res://.godot/imported/speaker-textbox-icon.svg-e67964032c31cfdc4bf5a376d48a985e.ctex"
+uid="uid://dccc72vh5qn62"
+path="res://.godot/imported/Raccoon Sprite Idle Forward 1.png-70a179dcf80f2ef793d8502c2ed4d56b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/speaker-textbox-icon.svg"
-dest_files=["res://.godot/imported/speaker-textbox-icon.svg-e67964032c31cfdc4bf5a376d48a985e.ctex"]
+source_file="res://Characters/Raccoon Sprite Idle Forward 1.png"
+dest_files=["res://.godot/imported/Raccoon Sprite Idle Forward 1.png-70a179dcf80f2ef793d8502c2ed4d56b.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

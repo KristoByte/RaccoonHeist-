@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://yajoalun2mmo"]
+[gd_scene load_steps=35 format=3 uid="uid://yajoalun2mmo"]
 
 [ext_resource type="Script" path="res://Characters/Character Scripts/raccoon_opening_scene.gd" id="1_hmphc"]
 [ext_resource type="Texture2D" uid="uid://4b2w328i5ku5" path="res://Characters/Raccoon Sprite Idle Backward.png" id="2_etg2j"]
@@ -20,6 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://onjvge14rg6g" path="res://Characters/Raccoon Sprite Idle Right 2.png" id="12_44a5q"]
 [ext_resource type="Texture2D" uid="uid://b0yj35rilmmpi" path="res://Characters/Raccoon Sprite Idle Right 3.png" id="13_mefgf"]
 [ext_resource type="Texture2D" uid="uid://bpgtqprrs4wxm" path="res://Characters/Raccoon Sprite Moving Forward 3 .png" id="16_k21sx"]
+[ext_resource type="Texture2D" uid="uid://bswufpcrct4rg" path="res://Characters/Raccoon Sprite Moving Left 1 .png" id="19_piucu"]
+[ext_resource type="Texture2D" uid="uid://dlw5kci8udttf" path="res://Characters/Raccoon Sprite Moving Left 2.png" id="20_clt70"]
+[ext_resource type="Texture2D" uid="uid://ctch1y2kf3nm0" path="res://Characters/Raccoon Sprite Moving Left 3.png" id="21_rjss6"]
+[ext_resource type="Texture2D" uid="uid://dg8dmd8fkoxb8" path="res://Characters/Raccoon Sprite Moving Right 1.png" id="22_4dejy"]
+[ext_resource type="Texture2D" uid="uid://wdmqiei56v6q" path="res://Characters/Raccoon Sprite Moving Right 2.png" id="23_vleti"]
+[ext_resource type="Texture2D" uid="uid://cch83mm8r5tv3" path="res://Characters/Raccoon Sprite Moving Right 3 .png" id="24_rt4la"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fxetd"]
 atlas = ExtResource("3_gd8co")
@@ -155,17 +161,44 @@ animations = [{
 "loop": true,
 "name": &"walking forward",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_piucu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_clt70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rjss6")
+}],
+"loop": true,
+"name": &"walking left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_4dejy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vleti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_rt4la")
+}],
+"loop": true,
+"name": &"walking right",
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qujqy"]
-radius = 34.2105
-height = 98.0
+radius = 24.5614
+height = 66.5385
 
 [sub_resource type="LabelSettings" id="LabelSettings_jr1lm"]
 font_size = 12
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-visible = false
 position = Vector2(287, 145)
 script = ExtResource("1_hmphc")
 
@@ -173,15 +206,16 @@ script = ExtResource("1_hmphc")
 position = Vector2(41, 12)
 scale = Vector2(0.378421, 0.379763)
 sprite_frames = SubResource("SpriteFrames_37fus")
-animation = &"walking forward"
-frame_progress = 0.533159
+animation = &"walking left"
+frame_progress = 0.56368
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(57, -5)
-scale = Vector2(4.56, 5.2)
+position = Vector2(7, 1)
+scale = Vector2(3.16, 4.04)
 shape = SubResource("CapsuleShape2D_qujqy")
 
 [node name="Inventory" type="Node2D" parent="."]
+visible = false
 script = ExtResource("3_5umee")
 
 [node name="Inventory Window" type="Panel" parent="Inventory"]

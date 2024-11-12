@@ -44,3 +44,5 @@ label_settings = SubResource("LabelSettings_ab3yy")
 horizontal_alignment = 2
 vertical_alignment = 2
 justification_flags = 161
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

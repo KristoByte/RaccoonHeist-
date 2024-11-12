@@ -165,6 +165,7 @@ height = 98.0
 font_size = 12
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+visible = false
 position = Vector2(287, 145)
 script = ExtResource("1_hmphc")
 
@@ -182,7 +183,6 @@ scale = Vector2(4.56, 5.2)
 shape = SubResource("CapsuleShape2D_qujqy")
 
 [node name="Inventory" type="Node2D" parent="."]
-visible = false
 script = ExtResource("3_5umee")
 
 [node name="Inventory Window" type="Panel" parent="Inventory"]

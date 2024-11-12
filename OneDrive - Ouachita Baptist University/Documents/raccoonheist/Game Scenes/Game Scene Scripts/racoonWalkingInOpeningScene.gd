@@ -10,5 +10,9 @@ func _process(delta):
 	progress_ratio += delta * speed
 	
 	if progress_ratio == 1:
+		$CharacterBody2D/AnimatedSprite2D.play("walking forward")
 		if Input.is_action_just_pressed("talk"):
 			Dialogic.start("raccoonTalkingToPlayer")
+			
+	if progress_ratio < 1:
+		$CharacterBody2D/AnimatedSprite2D.play("idle right")

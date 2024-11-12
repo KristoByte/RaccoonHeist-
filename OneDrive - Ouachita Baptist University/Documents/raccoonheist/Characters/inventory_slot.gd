@@ -1,10 +1,10 @@
 class_name InventorySlot
 extends Button
-var item : Item
-var quantity : int
-@onready var icon : TextureRect = get_node("Icon")
-@onready var quantity_text : Label = get_node("QuantityText")
-var inventory : inventory
+var item: Item
+var quantity: int
+@onready var icon: TextureRect = get_node("Icon")
+@onready var quantity_text: Label = get_node("QuantityText")
+var inventory: Inventory
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -14,7 +14,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func set_item(new_item : Item):
+func set_item(new_item: Item):
 	item = new_item
 	quantity = 1
 	
@@ -32,7 +32,7 @@ func add_item():
 func remove_item():
 	quantity -= 1
 	update_quantity_text()
-	if quantity = 0:
+	if quantity == 0:
 		set_item(null)
 func update_quantity_text():
 	if quantity <= 1:

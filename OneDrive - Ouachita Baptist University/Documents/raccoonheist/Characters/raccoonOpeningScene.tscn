@@ -200,11 +200,12 @@ font_size = 12
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(287, 145)
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_hmphc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(41, 12)
-scale = Vector2(0.378421, 0.379763)
+scale = Vector2(0.1, 0.101)
 sprite_frames = SubResource("SpriteFrames_37fus")
 animation = &"walking left"
 frame_progress = 0.56368
@@ -215,6 +216,7 @@ scale = Vector2(3.16, 4.04)
 shape = SubResource("CapsuleShape2D_qujqy")
 
 [node name="Inventory" type="Node2D" parent="."]
+scale = Vector2(2, 2)
 script = ExtResource("3_5umee")
 
 [node name="Inventory Window" type="Panel" parent="Inventory"]

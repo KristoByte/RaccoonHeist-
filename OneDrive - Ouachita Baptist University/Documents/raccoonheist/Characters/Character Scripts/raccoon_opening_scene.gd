@@ -18,6 +18,6 @@ func _process(delta):
 	if ($AnimatedSprite2D.animation == "walking forward"):
 		$CollisionShape2D.scale.x = 4.56
 		$CollisionShape2D.scale.y = 5.2
-	else if ($AnimatedSprite2D.animation == "walking left"):
+	elif ($AnimatedSprite2D.animation == "walking left"):
 		$CollisionShape2D.scale.x = 4.56
 		$CollisionShape2D.scale.y = 5.2

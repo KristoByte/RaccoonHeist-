@@ -13,3 +13,8 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+	
+	
+func _ready():
+	$AnimatedSprite2D.animation = "idle forward"
+	$AnimatedSprite2D.play()

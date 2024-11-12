@@ -14,7 +14,10 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	
-func _ready():
-	$AnimatedSprite2D.animation = "idle forward"
-	$AnimatedSprite2D.play()
+func _process(delta):
+	if ($AnimatedSprite2D.animation == "walking forward"):
+		$CollisionShape2D.scale.x = 4.56
+		$CollisionShape2D.scale.y = 5.2
+	else if ($AnimatedSprite2D.animation == "walking left"):
+		$CollisionShape2D.scale.x = 4.56
+		$CollisionShape2D.scale.y = 5.2

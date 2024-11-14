@@ -2,3 +2,4 @@ join RaccoonYapping (listening) center [animation="Slide In Up" wait="true"]
 RaccoonYapping (talking normal): Hi there! I am a raccoon!
 RaccoonYapping (talking sad): I am having some trouble and need some help!
 RaccoonYapping (talking normal): There is an evil chef who is trying to cook baby chickens and I have to save the eggs!
+[signal arg="change_scene"]

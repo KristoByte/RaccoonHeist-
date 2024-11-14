@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://yajoalun2mmo"]
+[gd_scene load_steps=38 format=3 uid="uid://yajoalun2mmo"]
 
 [ext_resource type="Script" path="res://Characters/Character Scripts/raccoon_opening_scene.gd" id="1_hmphc"]
 [ext_resource type="Texture2D" uid="uid://4b2w328i5ku5" path="res://Characters/Raccoon Sprite Idle Backward.png" id="2_etg2j"]
@@ -193,29 +193,61 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qujqy"]
 radius = 24.5614
-height = 66.5385
+height = 63.9806
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wk41p"]
+radius = 22.9167
+height = 67.2078
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgo4f"]
+radius = 21.8758
+height = 66.8808
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkrp8"]
+radius = 23.1253
+height = 63.6381
 
 [sub_resource type="LabelSettings" id="LabelSettings_jr1lm"]
 font_size = 12
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(287, 145)
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_hmphc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(41, 12)
-scale = Vector2(0.378421, 0.379763)
+scale = Vector2(0.1, 0.101)
 sprite_frames = SubResource("SpriteFrames_37fus")
-animation = &"walking left"
-frame_progress = 0.56368
+animation = &"idle right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7, 1)
-scale = Vector2(3.16, 4.04)
+[node name="CollisionShapeBackward" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(40, -52)
+scale = Vector2(4.49896, 6.34567)
 shape = SubResource("CapsuleShape2D_qujqy")
 
-[node name="Inventory" type="Node2D" parent="."]
+[node name="CollisionShapeForward" type="CollisionShape2D" parent="."]
 visible = false
+position = Vector2(40, 72)
+scale = Vector2(4.8, 6.16)
+shape = SubResource("CapsuleShape2D_wk41p")
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-23, 12)
+rotation = 1.57159
+scale = Vector2(4.8, 6.16)
+shape = SubResource("CapsuleShape2D_vgo4f")
+
+[node name="CollisionShapeRight" type="CollisionShape2D" parent="."]
+position = Vector2(99, 11)
+rotation = 1.57159
+scale = Vector2(4.8, 6.16)
+shape = SubResource("CapsuleShape2D_jkrp8")
+
+[node name="Inventory" type="Node2D" parent="."]
+scale = Vector2(2, 2)
 script = ExtResource("3_5umee")
 
 [node name="Inventory Window" type="Panel" parent="Inventory"]

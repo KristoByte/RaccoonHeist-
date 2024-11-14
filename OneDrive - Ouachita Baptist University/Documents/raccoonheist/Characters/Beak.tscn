@@ -10,9 +10,11 @@ radius = 19.6469
 script = ExtResource("1_d3frc")
 
 [node name="Beak" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 180.0
+offset_bottom = 200.0
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_agwl1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, 13)
 shape = SubResource("CircleShape2D_525ow")

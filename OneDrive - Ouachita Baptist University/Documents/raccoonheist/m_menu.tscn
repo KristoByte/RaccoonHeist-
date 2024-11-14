@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-[gd_scene load_steps=8 format=3 uid="uid://cawrap4h7tox0"]
-
-=======
 [gd_scene load_steps=9 format=3 uid="uid://cawrap4h7tox0"]
 
 [ext_resource type="Script" path="res://m_menu.gd" id="1_jow6r"]
->>>>>>> cf0e9a4995342ac96a20953f443726d8371ed664
 [ext_resource type="Texture2D" uid="uid://gepf38pmnoys" path="res://craftpix-net-313304-free-mountain-peak-pixel-art-backgrounds/PNG/background 2/background 2.png" id="1_yqhrx"]
 [ext_resource type="FontFile" uid="uid://c884hqojw66ma" path="res://bandal_skies/Bandal Skies.otf" id="2_rs1sc"]
 
@@ -46,10 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-<<<<<<< HEAD
-=======
 script = ExtResource("1_jow6r")
->>>>>>> cf0e9a4995342ac96a20953f443726d8371ed664
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -146,10 +138,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-<<<<<<< HEAD
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_howtoplay_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_quit_pressed"]
-=======
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
->>>>>>> cf0e9a4995342ac96a20953f443726d8371ed664

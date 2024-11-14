@@ -209,15 +209,15 @@ font_size = 12
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(523, 323)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_hmphc")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(10, 20.0001)
 scale = Vector2(1.26667, 1.15937)
 sprite_frames = SubResource("SpriteFrames_37fus")
-animation = &"walking forward"
-frame_progress = 0.816127
+animation = &"walking left"
 
 [node name="CollisionShapeIdleBackward" type="CollisionShape2D" parent="."]
 visible = false

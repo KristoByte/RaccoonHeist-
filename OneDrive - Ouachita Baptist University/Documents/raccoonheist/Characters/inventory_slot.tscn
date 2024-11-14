@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpixnt7ygn1bc"]
+[gd_scene load_steps=3 format=3 uid="uid://cpixnt7ygn1bc"]
 
 [ext_resource type="Script" path="res://Characters/inventory_slot.gd" id="1_4tgii"]
-[ext_resource type="Texture2D" uid="uid://bm4pexox1qk5n" path="res://icon.svg" id="2_5jk4t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab3yy"]
 font_size = 15
@@ -25,7 +24,6 @@ offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_5jk4t")
 expand_mode = 1
 
 [node name="QuantityText" type="Label" parent="."]
@@ -39,7 +37,6 @@ offset_left = -21.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "32"
 label_settings = SubResource("LabelSettings_ab3yy")
 horizontal_alignment = 2
 vertical_alignment = 2

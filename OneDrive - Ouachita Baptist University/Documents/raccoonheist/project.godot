@@ -54,6 +54,10 @@ text/autopauses={}
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+Item=""
+
 [input]
 
 up={

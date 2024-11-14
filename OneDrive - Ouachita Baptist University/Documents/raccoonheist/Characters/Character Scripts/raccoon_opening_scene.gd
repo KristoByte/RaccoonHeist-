@@ -8,12 +8,6 @@ var directionFacing
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
-<<<<<<< HEAD
-	#Get the input direction and handle the movement/deceleration.
-=======
-	
-	# Get the input direction and handle the movement/deceleration.
->>>>>>> c9fe19ac2b009d94eacbbe4727faae4458ae1c94
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	velocity = direction * SPEED
 	move_and_slide()

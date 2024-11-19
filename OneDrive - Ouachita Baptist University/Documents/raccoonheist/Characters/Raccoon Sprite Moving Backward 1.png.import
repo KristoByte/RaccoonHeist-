@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g2ng16fclycs"
-path="res://.godot/imported/Beak.png-6c45f549448f26058e484fd91bdf2241.ctex"
+uid="uid://wi20hex8sgmt"
+path="res://.godot/imported/Raccoon Sprite Moving Backward 1.png-b6c731ef4c3de26199f1fffaa0683b45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Costume/Beak.png"
-dest_files=["res://.godot/imported/Beak.png-6c45f549448f26058e484fd91bdf2241.ctex"]
+source_file="res://Characters/Raccoon Sprite Moving Backward 1.png"
+dest_files=["res://.godot/imported/Raccoon Sprite Moving Backward 1.png-b6c731ef4c3de26199f1fffaa0683b45.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://yajoalun2mmo"]
+[gd_scene load_steps=42 format=3 uid="uid://yajoalun2mmo"]
 
 [ext_resource type="Script" path="res://Characters/Character Scripts/raccoon_opening_scene.gd" id="1_hmphc"]
 [ext_resource type="Texture2D" uid="uid://4b2w328i5ku5" path="res://Characters/Raccoon Sprite Idle Backward.png" id="2_etg2j"]
@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://onjvge14rg6g" path="res://Characters/Raccoon Sprite Idle Right 2.png" id="12_44a5q"]
 [ext_resource type="Texture2D" uid="uid://b0yj35rilmmpi" path="res://Characters/Raccoon Sprite Idle Right 3.png" id="13_mefgf"]
 [ext_resource type="Texture2D" uid="uid://bpgtqprrs4wxm" path="res://Characters/Raccoon Sprite Moving Forward 3 .png" id="16_k21sx"]
+[ext_resource type="Texture2D" uid="uid://wi20hex8sgmt" path="res://Characters/Raccoon Sprite Moving Backward 1.png" id="16_yfq8n"]
+[ext_resource type="Texture2D" uid="uid://c3tt13ji8clwl" path="res://Characters/Raccoon Sprite Moving Backward 2 .png" id="17_tm443"]
+[ext_resource type="Texture2D" uid="uid://43uevlfn26gr" path="res://Characters/Raccoon Sprite Moving Backward 3.png" id="18_uu3if"]
 [ext_resource type="Texture2D" uid="uid://bswufpcrct4rg" path="res://Characters/Raccoon Sprite Moving Left 1 .png" id="19_piucu"]
 [ext_resource type="Texture2D" uid="uid://dlw5kci8udttf" path="res://Characters/Raccoon Sprite Moving Left 2.png" id="20_clt70"]
 [ext_resource type="Texture2D" uid="uid://ctch1y2kf3nm0" path="res://Characters/Raccoon Sprite Moving Left 3.png" id="21_rjss6"]
@@ -147,6 +150,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("16_yfq8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tm443")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uu3if")
+}],
+"loop": true,
+"name": &"walking backward",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_mtr0l")
 }, {
 "duration": 1.0,
@@ -160,7 +177,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walking forward",
-"speed": 4.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -217,7 +234,9 @@ metadata/_edit_group_ = true
 position = Vector2(10, 20.0001)
 scale = Vector2(1.26667, 1.15937)
 sprite_frames = SubResource("SpriteFrames_37fus")
-animation = &"walking left"
+animation = &"walking right"
+frame = 2
+frame_progress = 0.915875
 
 [node name="CollisionShapeIdleBackward" type="CollisionShape2D" parent="."]
 visible = false

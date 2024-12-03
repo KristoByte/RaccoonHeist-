@@ -188,7 +188,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walking right",
-"speed": 6.0
+"speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_axur4"]
@@ -211,13 +211,13 @@ font_size = 12
 position = Vector2(523, 323)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_hmphc")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(10, 20.0001)
 scale = Vector2(1.26667, 1.15937)
 sprite_frames = SubResource("SpriteFrames_37fus")
-animation = &"walking left"
+animation = &"walking right"
+frame_progress = 0.0329584
 
 [node name="CollisionShapeIdleBackward" type="CollisionShape2D" parent="."]
 visible = false

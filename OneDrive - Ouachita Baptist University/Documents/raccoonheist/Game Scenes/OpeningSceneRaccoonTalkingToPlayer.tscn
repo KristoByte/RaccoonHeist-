@@ -227,7 +227,7 @@ loop = false
 script = ExtResource("4_a3im1")
 
 [node name="CharacterBody2D" parent="Path2D/RaccoonWalkingIn" instance=ExtResource("4_xbj0f")]
-position = Vector2(1, 0)
+position = Vector2(-1, 0)
 scale = Vector2(0.05, 0.05)
 
 [node name="Camera2D" type="Camera2D" parent="."]

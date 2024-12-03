@@ -13,8 +13,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _ready():
-	$AnimatedSprite2D.animation = "idle forward"
-	$AnimatedSprite2D.play()
+	$AnimatedSprite2D.play("walking right")
 	directionFacing = "south"
 	
 
@@ -76,26 +75,26 @@ func _process(delta):
 		get_node("CollisionShapeWalkingForward").disabled = true
 		get_node("CollisionShapeWalkingLeft").disabled = true
 		get_node("CollisionShapeWalkingRight").disabled = false
-
+		
 	if Input.is_action_pressed("up"):
-		$AnimatedSprite2D.animation = "walking forward"
+		$AnimatedSprite2D.play("walking forward")
 		directionFacing = "north"
 	elif Input.is_action_pressed("right"):
-		$AnimatedSprite2D.animation = "walking right"
+		$AnimatedSprite2D.play("walking right")
 		directionFacing = "east"
 	elif Input.is_action_pressed("down"):
-		$AnimatedSprite2D.animation = "walking forward"
+		$AnimatedSprite2D.play("walking forward")
 		directionFacing = "south"
 	elif Input.is_action_pressed("left"):
-		$AnimatedSprite2D.animation = "walking left"
+		$AnimatedSprite2D.play("walking left")
 		directionFacing = "west"
-	else:
-		if directionFacing == "north":
-			$AnimatedSprite2D.animation = "idle backward"
-		elif directionFacing == "east":
-			$AnimatedSprite2D.animation = "idle right"
-		elif directionFacing == "south":
-			$AnimatedSprite2D.animation = "idle forward"
-		else:
-			$AnimatedSprite2D.animation = "idle left"
+	#else:
+		#if directionFacing == "north":
+			#$AnimatedSprite2D.play("idle backward")
+		#elif directionFacing == "east":
+			#$AnimatedSprite2D.play("idle right")
+		#elif directionFacing == "south":
+			#$AnimatedSprite2D.play("idle forward")
+		#else:
+			#$AnimatedSprite2D.play("idle left")
 	

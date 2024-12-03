@@ -1890,6 +1890,8 @@ layer_2/tile_data = PackedInt32Array(1572882, 2555905, 2, 1572881, 2555905, 2, 1
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_t4rli")]
 position = Vector2(17, 194)
+scale = Vector2(0.025, 0.025)
+safe_margin = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(3, 3)
@@ -1966,5 +1968,5 @@ position = Vector2(889.375, 98.25)
 shape = SubResource("RectangleShape2D_fdnym")
 
 [node name="Node2D" parent="." instance=ExtResource("4_slvqt")]
-position = Vector2(553, 147)
+position = Vector2(687, 163)
 scale = Vector2(0.5, 0.5)

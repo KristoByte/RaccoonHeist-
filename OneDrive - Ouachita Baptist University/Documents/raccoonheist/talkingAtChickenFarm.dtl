@@ -1,0 +1,5 @@
+join RaccoonYapping (talking sad) center
+RaccoonYapping (talking sad): Hmm...
+RaccoonYapping (talking sad): It seems there is a puzzle I have to complete to be able to get through the fence.
+RaccoonYapping (talking normal): Hey! Maybe you can help me solve it!
+[signal arg="change_scene"]

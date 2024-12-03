@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dth80kdywwvba"
-path="res://.godot/imported/woodenfenceforpuzzle.jpg-2a3880743af9b955b0ba458161a8c2d1.ctex"
+path="res://.godot/imported/woodenfenceforpuzzle.jpg-0a13557ec19cc0113a4935c6b53783fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://woodenfenceforpuzzle.jpg"
-dest_files=["res://.godot/imported/woodenfenceforpuzzle.jpg-2a3880743af9b955b0ba458161a8c2d1.ctex"]
+source_file="res://Game Scenes/woodenfenceforpuzzle.jpg"
+dest_files=["res://.godot/imported/woodenfenceforpuzzle.jpg-0a13557ec19cc0113a4935c6b53783fd.ctex"]
 
 [params]
 

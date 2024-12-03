@@ -77,11 +77,8 @@ func _process(delta):
 		get_node("CollisionShapeWalkingRight").disabled = false
 		
 	if Input.is_action_pressed("up"):
-<<<<<<< HEAD
 		$AnimatedSprite2D.play("walking forward")
-=======
 		$AnimatedSprite2D.animation = "walking backward"
->>>>>>> 2bbda75f82dadab0af0c161d37e6ba8cbdd77d6c
 		directionFacing = "north"
 	elif Input.is_action_pressed("right"):
 		$AnimatedSprite2D.play("walking right")

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 200.0
+const SPEED = 100.0
 
 var directionFacing
 
@@ -11,14 +11,6 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	velocity = direction * SPEED
 	move_and_slide()
-
-func _ready():
-	$AnimatedSprite2D.play("walking right")
-	directionFacing = "south"
-	
-
-
-func _process(delta):
 	if ($AnimatedSprite2D.animation == "idle backward"):
 		get_node("CollisionShapeIdleBackward").disabled = false
 		get_node("CollisionShapeIdleForward").disabled = true
@@ -89,13 +81,18 @@ func _process(delta):
 	elif Input.is_action_pressed("left"):
 		$AnimatedSprite2D.play("walking left")
 		directionFacing = "west"
-	#else:
-		#if directionFacing == "north":
-			#$AnimatedSprite2D.play("idle backward")
-		#elif directionFacing == "east":
-			#$AnimatedSprite2D.play("idle right")
-		#elif directionFacing == "south":
-			#$AnimatedSprite2D.play("idle forward")
-		#else:
-			#$AnimatedSprite2D.play("idle left")
+	else:
+		if directionFacing == "north":
+			$AnimatedSprite2D.animation = "idle backward"
+		elif directionFacing == "east":
+			$AnimatedSprite2D.animation = "idle right"
+		elif directionFacing == "south":
+			$AnimatedSprite2D.animation = "idle forward"
+		else:
+			$AnimatedSprite2D.animation = "idle left"
 	
+
+func _ready():
+	$AnimatedSprite2D.animation = "idle forward"
+	$AnimatedSprite2D.play()
+	directionFacing = "south"

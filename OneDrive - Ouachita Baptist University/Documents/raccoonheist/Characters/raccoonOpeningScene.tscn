@@ -231,45 +231,38 @@ sprite_frames = SubResource("SpriteFrames_37fus")
 animation = &"walking forward"
 
 [node name="CollisionShapeIdleBackward" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(5, -175)
 scale = Vector2(38.6, 42.4)
 shape = SubResource("CapsuleShape2D_axur4")
 
 [node name="CollisionShapeIdleForward" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 210)
 scale = Vector2(36.8, 42.4)
 shape = SubResource("CapsuleShape2D_a4ili")
 
 [node name="CollisionShapeIdleLeft" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-205, 20)
 rotation = -1.58437
 scale = Vector2(35.8145, 45.6003)
 shape = SubResource("CapsuleShape2D_tyo1a")
 
 [node name="CollisionShapeIdleRight" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(215, 20)
 rotation = -1.58437
 scale = Vector2(35.8145, 45.6003)
 shape = SubResource("CapsuleShape2D_tyo1a")
 
 [node name="CollisionShapeWalkingForward" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(155, -35)
 scale = Vector2(33.4667, 22.1594)
 shape = SubResource("CapsuleShape2D_qc27h")
 
 [node name="CollisionShapeWalkingLeft" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-120, -35)
 scale = Vector2(18.6667, 27.5594)
 shape = SubResource("CapsuleShape2D_6e6k7")
 
 [node name="CollisionShapeWalkingRight" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(145, -30)
 scale = Vector2(18.6667, 27.5594)
 shape = SubResource("CapsuleShape2D_6e6k7")

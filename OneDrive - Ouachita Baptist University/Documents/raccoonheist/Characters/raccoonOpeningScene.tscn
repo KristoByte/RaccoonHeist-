@@ -233,9 +233,7 @@ script = ExtResource("1_hmphc")
 position = Vector2(10, 20.0001)
 scale = Vector2(1.26667, 1.15937)
 sprite_frames = SubResource("SpriteFrames_37fus")
-animation = &"walking right"
-frame = 2
-frame_progress = 0.915875
+animation = &"walking forward"
 
 [node name="CollisionShapeIdleBackward" type="CollisionShape2D" parent="."]
 visible = false

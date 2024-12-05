@@ -23,4 +23,6 @@ func _process(delta):
 
 func _on_dialogic_signal(argument: String):
 	if argument == "change_scene":
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
 		get_tree().change_scene_to_file("res://FenceGame.tscn")

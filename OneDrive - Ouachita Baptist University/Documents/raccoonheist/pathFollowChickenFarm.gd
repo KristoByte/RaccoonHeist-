@@ -4,7 +4,7 @@ var speed = 0.15
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	#$CharacterBody2D/AnimatedSprite2D.play("walking right")
+	$CharacterBody2D/AnimatedSprite2D.play("walking right")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

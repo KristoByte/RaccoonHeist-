@@ -1,14 +1,12 @@
-[gd_scene load_steps=42 format=3 uid="uid://yajoalun2mmo"]
+[gd_scene load_steps=39 format=3 uid="uid://yajoalun2mmo"]
 
 [ext_resource type="Script" path="res://Characters/Character Scripts/raccoon_opening_scene.gd" id="1_hmphc"]
 [ext_resource type="Texture2D" uid="uid://4b2w328i5ku5" path="res://Characters/Raccoon Sprite Idle Backward.png" id="2_etg2j"]
 [ext_resource type="Texture2D" uid="uid://yleynbax0no6" path="res://Characters/Raccoon Sprite Moving Forward 1.png" id="2_mtr0l"]
 [ext_resource type="Texture2D" uid="uid://ohln37fprw01" path="res://Characters/Raccoon Sprite Moving Forward 2.png" id="3_5chwe"]
-[ext_resource type="Script" path="res://Characters/inventory.gd" id="3_5umee"]
 [ext_resource type="Texture2D" uid="uid://fqnafqssgnp" path="res://Characters/Raccoon in Chicken Costume.png" id="3_8j1aq"]
 [ext_resource type="Texture2D" uid="uid://blg75uq4nn6qs" path="res://Characters/Raccoon Sprite Idle Backward 2.png" id="3_byti6"]
 [ext_resource type="Texture2D" uid="uid://bsqa0wd3h17xi" path="res://Characters/Raccoon as Chicken Standing.png" id="3_gd8co"]
-[ext_resource type="PackedScene" uid="uid://cpixnt7ygn1bc" path="res://Characters/inventory_slot.tscn" id="4_6lhiq"]
 [ext_resource type="Texture2D" uid="uid://2fgthjy2v8gp" path="res://Characters/Raccoon Sprite Idle Backward 3.png" id="4_ch6nf"]
 [ext_resource type="Texture2D" uid="uid://dccc72vh5qn62" path="res://Characters/Raccoon Sprite Idle Forward 1.png" id="5_amowa"]
 [ext_resource type="Texture2D" uid="uid://cbbtxhrttckj6" path="res://Characters/Raccoon Sprite Idle Forward 2.png" id="6_s5jtp"]
@@ -221,9 +219,6 @@ height = 44.992
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6e6k7"]
 radius = 12.3214
 
-[sub_resource type="LabelSettings" id="LabelSettings_jr1lm"]
-font_size = 12
-
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(523, 323)
 scale = Vector2(0.1, 0.1)
@@ -233,11 +228,7 @@ script = ExtResource("1_hmphc")
 position = Vector2(10, 20.0001)
 scale = Vector2(1.26667, 1.15937)
 sprite_frames = SubResource("SpriteFrames_37fus")
-<<<<<<< HEAD
-animation = &"idle forward"
-=======
 animation = &"walking forward"
->>>>>>> 06b3e14170d705c7a69a80777022303216fcf27e
 
 [node name="CollisionShapeIdleBackward" type="CollisionShape2D" parent="."]
 visible = false
@@ -282,100 +273,3 @@ visible = false
 position = Vector2(145, -30)
 scale = Vector2(18.6667, 27.5594)
 shape = SubResource("CapsuleShape2D_6e6k7")
-
-[node name="Inventory" type="Node2D" parent="."]
-visible = false
-scale = Vector2(2, 2)
-script = ExtResource("3_5umee")
-
-[node name="Inventory Window" type="Panel" parent="Inventory"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -144.0
-offset_top = -88.5
-offset_right = 144.0
-offset_bottom = 88.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="SlotContainer" type="GridContainer" parent="Inventory/Inventory Window"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -130.5
-offset_top = -75.5
-offset_right = 130.5
-offset_bottom = 75.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 5
-columns = 5
-
-[node name="InventorySlot" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot7" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot8" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot9" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot10" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot11" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot12" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot13" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot14" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot15" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot6" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot5" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot2" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot3" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InventorySlot4" parent="Inventory/Inventory Window/SlotContainer" instance=ExtResource("4_6lhiq")]
-layout_mode = 2
-
-[node name="InfoText" type="Label" parent="Inventory/Inventory Window"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -22.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "place holder"
-label_settings = SubResource("LabelSettings_jr1lm")
-horizontal_alignment = 1
-vertical_alignment = 1

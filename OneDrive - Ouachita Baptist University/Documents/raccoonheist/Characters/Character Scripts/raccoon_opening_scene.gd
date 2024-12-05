@@ -11,7 +11,6 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	velocity = direction * SPEED
-<<<<<<< HEAD
 	if (!inOpeningScene):
 		move_and_slide()
 
@@ -20,11 +19,9 @@ func _ready():
 	directionFacing = "south"
 	
 
-
 func _process(delta):
-=======
 	move_and_slide()
->>>>>>> 4bb480a1bf6769e72f4717de8c7205686c7d345c
+
 	if ($AnimatedSprite2D.animation == "idle backward"):
 		get_node("CollisionShapeIdleBackward").disabled = false
 		get_node("CollisionShapeIdleForward").disabled = true
@@ -82,7 +79,7 @@ func _process(delta):
 		get_node("CollisionShapeWalkingLeft").disabled = true
 		get_node("CollisionShapeWalkingRight").disabled = false
 		
-<<<<<<< HEAD
+		
 	if (!inOpeningScene):
 		if Input.is_action_pressed("up"):
 			$AnimatedSprite2D.play("walking backward")
@@ -106,7 +103,7 @@ func _process(delta):
 			else:
 				$AnimatedSprite2D.play("idle left")
 		
-=======
+
 	if Input.is_action_pressed("up"):
 		$AnimatedSprite2D.play("walking forward")
 		$AnimatedSprite2D.animation = "walking backward"
@@ -135,4 +132,3 @@ func _ready():
 	$AnimatedSprite2D.animation = "idle forward"
 	$AnimatedSprite2D.play()
 	directionFacing = "south"
->>>>>>> 4bb480a1bf6769e72f4717de8c7205686c7d345c

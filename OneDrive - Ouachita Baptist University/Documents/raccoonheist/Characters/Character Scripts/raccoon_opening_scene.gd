@@ -105,9 +105,34 @@ func _process(delta):
 				$AnimatedSprite2D.play("idle left")
 		
 
+<<<<<<< HEAD
 	
 
 #func _ready():
 	#$AnimatedSprite2D.animation = "idle forward"
 	#$AnimatedSprite2D.play()
 	#directionFacing = "south"
+=======
+	if Input.is_action_pressed("up"):
+		$AnimatedSprite2D.play("walking forward")
+		$AnimatedSprite2D.animation = "walking backward"
+		directionFacing = "north"
+	elif Input.is_action_pressed("right"):
+		$AnimatedSprite2D.play("walking right")
+		directionFacing = "east"
+	elif Input.is_action_pressed("down"):
+		$AnimatedSprite2D.play("walking forward")
+		directionFacing = "south"
+	elif Input.is_action_pressed("left"):
+		$AnimatedSprite2D.play("walking left")
+		directionFacing = "west"
+	else:
+		if directionFacing == "north":
+			$AnimatedSprite2D.animation = "idle backward"
+		elif directionFacing == "east":
+			$AnimatedSprite2D.animation = "idle right"
+		elif directionFacing == "south":
+			$AnimatedSprite2D.animation = "idle forward"
+		else:
+			$AnimatedSprite2D.animation = "idle left"
+>>>>>>> fa25e80bdc9c867af4e55b5d8f8e9507fa2845c8

@@ -20,7 +20,8 @@ func _ready():
 	
 
 func _process(delta):
-	move_and_slide()
+	if (!inOpeningScene):
+		move_and_slide()
 
 	if ($AnimatedSprite2D.animation == "idle backward"):
 		get_node("CollisionShapeIdleBackward").disabled = false
@@ -104,6 +105,14 @@ func _process(delta):
 				$AnimatedSprite2D.play("idle left")
 		
 
+<<<<<<< HEAD
+	
+
+#func _ready():
+	#$AnimatedSprite2D.animation = "idle forward"
+	#$AnimatedSprite2D.play()
+	#directionFacing = "south"
+=======
 	if Input.is_action_pressed("up"):
 		$AnimatedSprite2D.play("walking forward")
 		$AnimatedSprite2D.animation = "walking backward"
@@ -126,4 +135,8 @@ func _process(delta):
 			$AnimatedSprite2D.animation = "idle forward"
 		else:
 			$AnimatedSprite2D.animation = "idle left"
+<<<<<<< HEAD
 	
+=======
+>>>>>>> fa25e80bdc9c867af4e55b5d8f8e9507fa2845c8
+>>>>>>> b0892373dc259cf24441b62d7fb1ba14d5cfd264

@@ -15,7 +15,7 @@ func _process(delta):
 	progress_ratio += delta * speed
 	
 	if progress_ratio < 1:
-		$CharacterBody2D/AnimatedSprite2D.play("walking up")
+		$CharacterBody2D/AnimatedSprite2D.play("walking right")
 		
 	elif progress_ratio == 1:
 		$CharacterBody2D/AnimatedSprite2D.play("idle forward")

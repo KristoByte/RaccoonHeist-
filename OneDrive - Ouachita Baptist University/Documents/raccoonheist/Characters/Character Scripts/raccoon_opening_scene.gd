@@ -126,9 +126,3 @@ func _process(delta):
 			$AnimatedSprite2D.animation = "idle forward"
 		else:
 			$AnimatedSprite2D.animation = "idle left"
-	
-
-func _ready():
-	$AnimatedSprite2D.animation = "idle forward"
-	$AnimatedSprite2D.play()
-	directionFacing = "south"

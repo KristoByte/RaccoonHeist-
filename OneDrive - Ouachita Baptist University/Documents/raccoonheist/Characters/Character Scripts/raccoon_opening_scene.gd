@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 200.0
+const SPEED = 100.0
 
+var inOpeningScene
 var directionFacing
 
 
@@ -10,15 +11,18 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	velocity = direction * SPEED
-	move_and_slide()
+	if (!inOpeningScene):
+		move_and_slide()
 
 func _ready():
 	$AnimatedSprite2D.play("walking right")
 	directionFacing = "south"
 	
 
-
 func _process(delta):
+	if (!inOpeningScene):
+		move_and_slide()
+
 	if ($AnimatedSprite2D.animation == "idle backward"):
 		get_node("CollisionShapeIdleBackward").disabled = false
 		get_node("CollisionShapeIdleForward").disabled = true
@@ -76,12 +80,42 @@ func _process(delta):
 		get_node("CollisionShapeWalkingLeft").disabled = true
 		get_node("CollisionShapeWalkingRight").disabled = false
 		
-	if Input.is_action_pressed("up"):
+		
+	if (!inOpeningScene):
+		if Input.is_action_pressed("up"):
+			$AnimatedSprite2D.play("walking backward")
+			directionFacing = "north"
+		elif Input.is_action_pressed("right"):
+			$AnimatedSprite2D.play("walking right")
+			directionFacing = "east"
+		elif Input.is_action_pressed("down"):
+			$AnimatedSprite2D.play("walking forward")
+			directionFacing = "south"
+		elif Input.is_action_pressed("left"):
+			$AnimatedSprite2D.play("walking left")
+			directionFacing = "west"
+		else:
+			if directionFacing == "north":
+				$AnimatedSprite2D.play("idle backward")
+			elif directionFacing == "east":
+				$AnimatedSprite2D.play("idle right")
+			elif directionFacing == "south":
+				$AnimatedSprite2D.play("idle forward")
+			else:
+				$AnimatedSprite2D.play("idle left")
+		
+
 <<<<<<< HEAD
-		$AnimatedSprite2D.play("walking forward")
+	
+
+#func _ready():
+	#$AnimatedSprite2D.animation = "idle forward"
+	#$AnimatedSprite2D.play()
+	#directionFacing = "south"
 =======
+	if Input.is_action_pressed("up"):
+		$AnimatedSprite2D.play("walking forward")
 		$AnimatedSprite2D.animation = "walking backward"
->>>>>>> 2bbda75f82dadab0af0c161d37e6ba8cbdd77d6c
 		directionFacing = "north"
 	elif Input.is_action_pressed("right"):
 		$AnimatedSprite2D.play("walking right")
@@ -92,13 +126,17 @@ func _process(delta):
 	elif Input.is_action_pressed("left"):
 		$AnimatedSprite2D.play("walking left")
 		directionFacing = "west"
-	#else:
-		#if directionFacing == "north":
-			#$AnimatedSprite2D.play("idle backward")
-		#elif directionFacing == "east":
-			#$AnimatedSprite2D.play("idle right")
-		#elif directionFacing == "south":
-			#$AnimatedSprite2D.play("idle forward")
-		#else:
-			#$AnimatedSprite2D.play("idle left")
+	else:
+		if directionFacing == "north":
+			$AnimatedSprite2D.animation = "idle backward"
+		elif directionFacing == "east":
+			$AnimatedSprite2D.animation = "idle right"
+		elif directionFacing == "south":
+			$AnimatedSprite2D.animation = "idle forward"
+		else:
+			$AnimatedSprite2D.animation = "idle left"
+<<<<<<< HEAD
 	
+=======
+>>>>>>> fa25e80bdc9c867af4e55b5d8f8e9507fa2845c8
+>>>>>>> b0892373dc259cf24441b62d7fb1ba14d5cfd264

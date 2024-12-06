@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dth80kdywwvba"
-path="res://.godot/imported/woodenfenceforpuzzle.jpg-2a3880743af9b955b0ba458161a8c2d1.ctex"
+uid="uid://cqx4o4bwff6cj"
+path="res://.godot/imported/4 BigSet.png-0dcf850d6209759f6da44129278d45dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://woodenfenceforpuzzle.jpg"
-dest_files=["res://.godot/imported/woodenfenceforpuzzle.jpg-2a3880743af9b955b0ba458161a8c2d1.ctex"]
+source_file="res://Tile Sets/4 BigSet.png"
+dest_files=["res://.godot/imported/4 BigSet.png-0dcf850d6209759f6da44129278d45dc.ctex"]
 
 [params]
 

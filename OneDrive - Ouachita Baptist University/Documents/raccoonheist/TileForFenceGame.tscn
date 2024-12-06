@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c4vd8nssyqdxw"]
+[gd_scene load_steps=2 format=3 uid="uid://cbudmj00gpyu0"]
 
 [node name="tile" type="StaticBody2D"]
 

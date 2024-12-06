@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+TransitionScreen="*res://transition_screen.tscn"
 
 [dialogic]
 
@@ -25,7 +26,8 @@ directories/dch_directory={
 "RaccoonYapping": "res://DialogicTimelines/RaccoonYapping.dch"
 }
 directories/dtl_directory={
-"raccoonTalkingToPlayer": "res://DialogicTimelines/raccoonTalkingToPlayer.dtl"
+"raccoonTalkingToPlayer": "res://DialogicTimelines/raccoonTalkingToPlayer.dtl",
+"talkingAtChickenFarm": "res://talkingAtChickenFarm.dtl"
 }
 variables={}
 layout/style_list=[]

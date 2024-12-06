@@ -13,7 +13,7 @@ var previous = ""
 func _ready():
 	start_game()
 	
-
+#pulls images to start game 
 func start_game():
 	tile_h = get_window().get_size().x / 4
 	var image = Image.load_from_file("res://woodenfenceforpuzzle.jpg")
@@ -63,8 +63,10 @@ func _process(delta):
 		var rows = int(mouse_copy.position.y / offset)
 		var cols = int(mouse_copy.position.x / offset)
 		check_neighbours(rows,cols)
+		
+		#you win screen
 		if tiles == solved and movecounter > 1:
-			print("You win in ", str(movecounter, " moves!!"))
+			print("You won in ", str(movecounter, " moves!"))
 			$FullImage.show()
 			
 

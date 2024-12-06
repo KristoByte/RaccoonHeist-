@@ -26,5 +26,10 @@ func _process(delta):
 
 func _on_dialogic_signal(argument: String):
 	if argument == "change_scene":
+<<<<<<< HEAD
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
+=======
 		raccoon.inOpeningScene = false
+>>>>>>> b0892373dc259cf24441b62d7fb1ba14d5cfd264
 		get_tree().change_scene_to_file("res://FenceGame.tscn")

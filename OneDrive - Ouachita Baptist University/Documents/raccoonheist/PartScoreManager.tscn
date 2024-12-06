@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://crgfgr1si7ej8"]
+
+[ext_resource type="Script" path="res://label.gd" id="1_qp6uh"]
+
+[sub_resource type="FontFile" id="FontFile_fdudn"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = SubResource("FontFile_fdudn")
+text = "Parts Collected: 0"
+script = ExtResource("1_qp6uh")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://51blk3md4slv"]
+
+[ext_resource type="Script" path="res://Characters/beak.gd" id="1_po18b"]
+[ext_resource type="Texture2D" uid="uid://cxn0b7oqcc1ff" path="res://Characters/Costume/Chicken Mask.png" id="2_yl6xo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_525ow"]
+radius = 19.6469
+
+[node name="Node2D" type="Node2D" groups=["Item"]]
+script = ExtResource("1_po18b")
+
+[node name="ChickenMask" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 28.0
+offset_bottom = 28.0
+texture = ExtResource("2_yl6xo")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 13)
+shape = SubResource("CircleShape2D_525ow")

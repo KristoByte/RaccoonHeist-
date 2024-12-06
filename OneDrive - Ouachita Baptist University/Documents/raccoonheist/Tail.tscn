@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4antae1drhy1"]
+
+[ext_resource type="Script" path="res://Characters/beak.gd" id="1_5xfm8"]
+[ext_resource type="Texture2D" uid="uid://d27n07uiq668b" path="res://Characters/Costume/Chicken Tail.png" id="2_5qdjl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_525ow"]
+radius = 19.6469
+
+[node name="Node2D" type="Node2D" groups=["Item"]]
+script = ExtResource("1_5xfm8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_5qdjl")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, 20)
+shape = SubResource("CircleShape2D_525ow")

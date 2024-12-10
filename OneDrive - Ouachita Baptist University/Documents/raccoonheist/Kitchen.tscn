@@ -757,7 +757,7 @@ size = Vector2(12.8492, 20)
 
 [sub_resource type="Curve2D" id="Curve2D_gkryo"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 51, 212, 0, 0, 0, 0, 59, 71)
+"points": PackedVector2Array(0, 0, 0, 0, 51, 212, 0, 0, 0, 0, 51, 71)
 }
 point_count = 2
 
@@ -797,7 +797,7 @@ curve = SubResource("Curve2D_gkryo")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(51, 212)
-rotation = -1.51412
+rotation = -1.5708
 scale = Vector2(17.96, 1)
 loop = false
 script = ExtResource("4_l3mjy")

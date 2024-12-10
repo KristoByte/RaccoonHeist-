@@ -2004,4 +2004,8 @@ script = ExtResource("3_8i7p3")
 [node name="CharacterBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("4_y18va")]
 position = Vector2(0, -0.999999)
 rotation = 3.14159
-scale = Vector2(0.025, 0.025)
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D/CharacterBody2D"]
+position = Vector2(-160.004, 39.998)
+scale = Vector2(40, 40)
+zoom = Vector2(3, 3)

@@ -1,10 +1,9 @@
 extends Label
 
 func _ready():
-	# Connect to the score_updated signal
-	ScoreManager.connect("score_updated", self, "_on_score_updated")
-	# Initialize the score display
-	text = "Score: " + str(PartScoreManager.score)
+	pass
 
-func _on_score_updated(new_score: int):
-	text = "Score: " + str(new_score)
+func _process(delta):
+	self.text = "Parts found: " + str(PartScoreManager.score)
+	if PartScoreManager.score == 5:
+		get_tree().change_scene_to_file("res://walking_up_to_the_chickenfarm.tscn")

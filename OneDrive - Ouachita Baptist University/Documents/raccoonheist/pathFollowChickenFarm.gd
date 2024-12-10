@@ -7,17 +7,17 @@ func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	raccoon = $CharacterBody2D
 	raccoon.inOpeningScene = true
-	$CharacterBody2D/AnimatedSprite2D.play("walking right")
+	$CharacterBody2D/AnimatedSprite2D.play("raccoonChickenSide")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	progress_ratio += delta * speed
 	
 	if progress_ratio < 1:
-		$CharacterBody2D/AnimatedSprite2D.play("walking left")
+		$CharacterBody2D/AnimatedSprite2D.play("raccoonChickenSide")
 		
 	elif progress_ratio == 1:
-		$CharacterBody2D/AnimatedSprite2D.play("idle forward")
+		$CharacterBody2D/AnimatedSprite2D.play("raccoonChickenFront")
 		if Input.is_action_just_pressed("talk"):
 			Dialogic.start("talkingAtChickenFarm")
 		

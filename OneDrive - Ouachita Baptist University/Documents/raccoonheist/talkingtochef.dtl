@@ -1,0 +1,10 @@
+join RaccoonYapping center
+RaccoonYapping: Haha! I got you now Evil Chef
+join Chef center
+leave RaccoonYapping
+Chef: What?? I am not the evil one...
+Chef: You are! You are the one who keeps trying to steal my eggs!
+join RaccoonYapping center
+leave Chef
+RaccoonYapping: Ha, you got me... *evil laugh*
+[signal arg="change_scene"]

@@ -17,4 +17,13 @@ func _process(delta):
 		
 	else:
 		raccoon.inOpeningScene = false
+		if Input.is_action_just_pressed("talk"):
+			Dialogic.start("talkingtochef")
 	
+	
+func _on_dialogic_signal(argument: String):
+	if argument == "change_scene":
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
+		raccoon.inOpeningScene = false
+		get_tree().change_scene_to_file("res://main_menu.tscn")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dnectyj3vvrq4"]
+[gd_scene load_steps=13 format=3 uid="uid://b48hcgxcrk4w4"]
 
 [ext_resource type="Texture2D" uid="uid://cqx4o4bwff6cj" path="res://Tile Sets/4 BigSet.png" id="1_b38bj"]
 [ext_resource type="Texture2D" uid="uid://uhc7cog0whqo" path="res://Tile Sets/roguelikeIndoor_transparent.png" id="2_kryeh"]
 [ext_resource type="PackedScene" uid="uid://yajoalun2mmo" path="res://Characters/raccoonOpeningScene.tscn" id="3_xcl3u"]
 [ext_resource type="Texture2D" uid="uid://iq246e01s0yt" path="res://Characters/Chef W1.png" id="4_bsi20"]
 [ext_resource type="Script" path="res://path_follow_2d.gd" id="4_l3mjy"]
+[ext_resource type="Script" path="res://chefKitchen.gd" id="4_qiweo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ma3ol"]
 texture = ExtResource("1_b38bj")
@@ -756,7 +757,7 @@ size = Vector2(12.8492, 20)
 
 [sub_resource type="Curve2D" id="Curve2D_gkryo"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 51, 212, 0, 0, 0, 0, 51, 187)
+"points": PackedVector2Array(0, 0, 0, 0, 51, 212, 0, 0, 0, 0, 59, 71)
 }
 point_count = 2
 
@@ -784,7 +785,10 @@ texture = ExtResource("4_bsi20")
 region_enabled = true
 region_rect = Rect2(18.0805, 7.27009, 11.8239, 18.7831)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+script = ExtResource("4_qiweo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 position = Vector2(-0.377918, 0)
 shape = SubResource("RectangleShape2D_j56xt")
 
@@ -793,7 +797,7 @@ curve = SubResource("Curve2D_gkryo")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(51, 212)
-rotation = -1.5708
+rotation = -1.51412
 scale = Vector2(17.96, 1)
 loop = false
 script = ExtResource("4_l3mjy")
@@ -808,3 +812,5 @@ skew = 0.29933
 position = Vector2(150.862, 49.993)
 scale = Vector2(751.372, 109.019)
 zoom = Vector2(6, 6)
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_body_entered"]

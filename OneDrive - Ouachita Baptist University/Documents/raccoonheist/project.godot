@@ -19,15 +19,18 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 TransitionScreen="*res://transition_screen.tscn"
+PartScoreManager="*res://PartScoreManager.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"Chef": "res://Chef.dch",
 "RaccoonYapping": "res://DialogicTimelines/RaccoonYapping.dch"
 }
 directories/dtl_directory={
 "raccoonTalkingToPlayer": "res://DialogicTimelines/raccoonTalkingToPlayer.dtl",
-"talkingAtChickenFarm": "res://talkingAtChickenFarm.dtl"
+"talkingAtChickenFarm": "res://talkingAtChickenFarm.dtl",
+"talkingtochef": "res://talkingtochef.dtl"
 }
 variables={}
 layout/style_list=[]

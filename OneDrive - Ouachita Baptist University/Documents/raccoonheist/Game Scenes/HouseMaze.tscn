@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://chr5iummd5qm6"]
+[gd_scene load_steps=6 format=3 uid="uid://18chcag14nxx"]
 
 [ext_resource type="Texture2D" uid="uid://uhc7cog0whqo" path="res://Tile Sets/roguelikeIndoor_transparent.png" id="1_gefsx"]
 [ext_resource type="Texture2D" uid="uid://cqx4o4bwff6cj" path="res://Tile Sets/4 BigSet.png" id="2_hbilh"]

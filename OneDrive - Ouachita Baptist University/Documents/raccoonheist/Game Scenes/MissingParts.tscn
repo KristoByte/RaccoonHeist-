@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://q58tjaccfinq" path="res://free version/Tilesheets/Outdoors/spr_tileset_sunnysideworld_16px.png" id="2_yoicf"]
 [ext_resource type="PackedScene" uid="uid://yajoalun2mmo" path="res://Characters/raccoonOpeningScene.tscn" id="3_t4rli"]
 [ext_resource type="PackedScene" uid="uid://cdwr55k7hfb1l" path="res://Characters/Beak.tscn" id="4_slvqt"]
-[ext_resource type="PackedScene" uid="uid://ciclutqnpk5xa" path="res://Chicken_feet.tscn" id="5_7hkd6"]
-[ext_resource type="PackedScene" uid="uid://bypcax216wmfh" path="res://Suit.tscn" id="6_4nt5a"]
-[ext_resource type="PackedScene" uid="uid://d4antae1drhy1" path="res://Tail.tscn" id="7_163qn"]
-[ext_resource type="PackedScene" uid="uid://51blk3md4slv" path="res://Mask.tscn" id="8_yho7e"]
-[ext_resource type="PackedScene" uid="uid://crgfgr1si7ej8" path="res://PartScoreManager.tscn" id="9_ba0ga"]
+[ext_resource type="PackedScene" uid="uid://d3t3xt0mbpjcb" path="res://Chicken_feet.tscn" id="5_7hkd6"]
+[ext_resource type="PackedScene" uid="uid://budfqwtj6b3bm" path="res://Suit.tscn" id="6_4nt5a"]
+[ext_resource type="PackedScene" uid="uid://8rwem14yn1bj" path="res://Tail.tscn" id="7_163qn"]
+[ext_resource type="PackedScene" uid="uid://cjyrjc45xlgnq" path="res://Mask.tscn" id="8_yho7e"]
+[ext_resource type="PackedScene" uid="uid://c18yx2s32duna" path="res://PartScoreManager.tscn" id="9_ba0ga"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5lc1"]
 texture = ExtResource("1_s126q")

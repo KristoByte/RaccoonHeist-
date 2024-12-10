@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://chr5iummd5qm6"]
+[gd_scene load_steps=8 format=3 uid="uid://chr5iummd5qm6"]
 
 [ext_resource type="Texture2D" uid="uid://uhc7cog0whqo" path="res://Tile Sets/roguelikeIndoor_transparent.png" id="1_gefsx"]
 [ext_resource type="Texture2D" uid="uid://cqx4o4bwff6cj" path="res://Tile Sets/4 BigSet.png" id="2_hbilh"]
+[ext_resource type="PackedScene" uid="uid://yajoalun2mmo" path="res://Characters/raccoonOpeningScene.tscn" id="3_brv0w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5cjgc"]
 texture = ExtResource("1_gefsx")
@@ -745,6 +746,9 @@ texture = ExtResource("2_hbilh")
 sources/0 = SubResource("TileSetAtlasSource_5cjgc")
 sources/1 = SubResource("TileSetAtlasSource_s1167")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kce80"]
+radius = 72.0625
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -792,3 +796,18 @@ polygon = PackedVector2Array(225, 450, 225, 464, 336, 464, 337, 512, 416, 513, 4
 
 [node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(481, 498, 481, 511, 496, 513, 497, 560, 511, 560, 511, 498)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_brv0w")]
+position = Vector2(38, 215)
+scale = Vector2(0.025, 0.025)
+safe_margin = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(3, 3)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1059, 290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -8)
+shape = SubResource("CircleShape2D_kce80")

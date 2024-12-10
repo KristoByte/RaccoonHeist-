@@ -7,6 +7,7 @@ func _ready():
 	raccoon = $CharacterBody2D
 	raccoon.inOpeningScene = true
 	$CharacterBody2D/AnimatedSprite2D.play("walking backward")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -26,4 +27,4 @@ func _on_dialogic_signal(argument: String):
 		TransitionScreen.transition()
 		await TransitionScreen.on_transition_finished
 		raccoon.inOpeningScene = false
-		get_tree().change_scene_to_file("res://main_menu.tscn")
+		get_tree().change_scene_to_file("res://m_menu.tscn")
